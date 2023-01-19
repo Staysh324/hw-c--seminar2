@@ -6,27 +6,34 @@
     return result;
 }
 
-int Check(int num)
+
+
+int num = InputInt("введите число");
+int num1 = 0;
+if (num < 99)
 {
-    if (num < 99)
+    System.Console.WriteLine("у введенного числа нет третьей цифры");
+
+}
+else
+    while (num > 1000)
     {
-        System.Console.WriteLine("в числе нет третьей цифры");
-    }
-    if (num > 1000)
-    {
-        while (num > 1000)
+        if (num > 1000)
         {
             num = num / 10;
         }
+        num1 = num;
+        num1 = num % 100;
+num1 = num % 10;
     }
-return num;
-}
+System.Console.WriteLine(num);
 
-int num = InputInt("введите число");
-Check(num);
-num = num % 100;
-num = num % 10;
-System.Console.WriteLine($"третья цифра введенного числа это {num}");
+Console.WriteLine($"третья цифра введенного числа это {num1}");
+
+
+
+
+
 
 
 
